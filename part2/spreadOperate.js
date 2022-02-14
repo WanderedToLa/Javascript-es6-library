@@ -18,3 +18,18 @@
 
     console.log(o2)
 }
+
+{
+    var person = {
+        hello : function(){
+            console.log(this.name + 'hi');
+        }
+    }
+
+    var person2 = {
+        name : "kim",
+    }
+
+    person.hello.apply(person2) // --> array 가능
+    person.hello.call(person2)
+}
