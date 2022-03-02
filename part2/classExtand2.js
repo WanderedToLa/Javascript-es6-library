@@ -121,5 +121,26 @@ var person = {
     let data = {
         odd : [],
         even : [],
+        setter : function(...num){
+            num.forEach(e => {
+                if(e % 2 == 1){
+                    this.odd.push(e)
+                } else {
+                    this.even.push(e)
+                }
+            });
+        },
+        // getter : odd , even 데이터 숫자순으로 정렬
+        getter : function(){
+            
+        }
     }
+    data.setter(1,2,3,4,5,6,7,8);
 }
+
+// if(num % 2 == 1){
+//     this.odd.push(num)
+//     console.log(num);
+// } else {
+//     this.even.push(num)
+// }
