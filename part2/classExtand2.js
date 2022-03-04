@@ -144,3 +144,14 @@ var person = {
 // } else {
 //     this.even.push(num)
 // }
+
+// function showText(index){
+            
+//     let slideTag = `
+//         <p>${textSlide[index].category}</p>
+//         <strong><img src=${textSlide[index].images} alt=""></strong>
+//         <p>${textSlide[index].title}</p>
+//         <p>${textSlide[index].time}</p>
+//     `
+//     listDesc.innerHTML = slideTag;
+// }
