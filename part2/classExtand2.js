@@ -137,21 +137,3 @@ var person = {
     }
     data.setter(1,2,3,4,5,6,7,8);
 }
-
-// if(num % 2 == 1){
-//     this.odd.push(num)
-//     console.log(num);
-// } else {
-//     this.even.push(num)
-// }
-
-// function showText(index){
-            
-//     let slideTag = `
-//         <p>${textSlide[index].category}</p>
-//         <strong><img src=${textSlide[index].images} alt=""></strong>
-//         <p>${textSlide[index].title}</p>
-//         <p>${textSlide[index].time}</p>
-//     `
-//     listDesc.innerHTML = slideTag;
-// }
