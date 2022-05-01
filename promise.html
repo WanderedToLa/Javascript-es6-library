@@ -1,0 +1,54 @@
+<img id="test" src="https://w.namu.la/s/dba06e187bc8a4ce392f2b935819751e0caa7dddebb863ad68d3cca6f7aefd2c9bb85b4fc45e5707a8f58fdebbfc47acb1cf6c91e619ad736d835369f9f1936b81408c9dd05d210e56be7e4c6a9d250c">
+<button>btn</button>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
+<script>
+    let testImg = document.querySelector('#test');
+
+    let test = new Promise(function(suc , fal){
+        testImg.addEventListener('load' , function(){
+            suc();
+        })
+        testImg.addEventListener('error' , function(){
+            fal();
+        })
+    });
+
+    test.then(function(){
+        console.log('suc')
+    }).catch(function(){
+        console.log('false');
+    })
+
+    let getText = new Promise(function(get , err){
+        $.get('https://codingapple1.github.io/hello.txt').done(function(res){
+            get(res);
+        })
+    })
+
+    getText.then(function(text){
+        console.log('success' + text)
+
+        let getText2 = new Promise(function(get , err){
+            $.get('https://codingapple1.github.io/hello2.txt').done(function(res){
+                get(res);
+            })
+        })
+
+        return getText2;
+    }).then(function(res){
+        console.log(res);
+    }) 
+
+    let button = document.querySelector('button');
+
+    let pushBtn = new Promise(function(push , error){
+        button.addEventListener('click' , function(){
+            push();
+        })
+    })
+
+    pushBtn.then(function(){
+        console.log('성공');
+    })
+</script>
